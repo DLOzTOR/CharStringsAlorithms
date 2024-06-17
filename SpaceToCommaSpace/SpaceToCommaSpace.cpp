@@ -1,13 +1,14 @@
 #include <iostream>
-char* space_to_comma_space(char* string, std::size_t length) {
+char* space_to_comma_space(char* string) {
     int new_string_length = 0;
-    for (std::size_t i = 0; i < length; i++) {
-        if(string[i] == ' '){
+    std::size_t length = 0;
+    while (string[length] != '\0') {
+        if(string[length] == ' '){
             new_string_length++;
         }
+        length++;
     }
     new_string_length = length + new_string_length + 1;
-    std::cout << new_string_length << std::endl;
     char* new_string = new char[new_string_length];
     std::size_t iter = 0;
     for (std::size_t i = 0; i < length; i++) {
@@ -27,8 +28,8 @@ char* space_to_comma_space(char* string, std::size_t length) {
 
 int main()
 {
-    char t[] = "test test test ";
-    char* new_t = space_to_comma_space(t, 15);
+    char t[] = "test test test test";
+    char* new_t = space_to_comma_space(t);
     std::cout << new_t;
     delete[] new_t;
     return 0;
