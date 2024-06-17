@@ -15,7 +15,6 @@ char* space_to_comma_space(char* string, std::size_t length) {
             new_string[iter] = ',';
             iter++;
             new_string[iter] = ' ';
-
         }
         else {
             new_string[iter] = string[i];
