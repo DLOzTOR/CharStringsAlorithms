@@ -63,7 +63,7 @@ char* replaceCharToCharArray(const char* string, char replace, const char* repla
     return new_string;
 }
 
-void countSubString(const char* string, const char* subString) {
+unsigned int countSubString(const char* string, const char* subString) {
     unsigned int subStringCount = 0;
     std::size_t iter = 0, subStringMatchIndex = 0;
     bool isSubStringMatch = false;
@@ -87,7 +87,7 @@ void countSubString(const char* string, const char* subString) {
         }
         iter++;
     }
-    std::cout << subStringCount << std::endl;
+    return subStringCount;
 }
 
 int main()
