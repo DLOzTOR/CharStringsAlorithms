@@ -65,24 +65,15 @@ char* replaceCharToCharArray(const char* string, char replace, const char* repla
 
 unsigned int countSubString(const char* string, const char* subString) {
     unsigned int subStringCount = 0;
-    std::size_t iter = 0, subStringMatchIndex = 0;
-    bool isSubStringMatch = false;
+    std::size_t iter = 0, subStringIndex = 0, subStringLength = charStrLength(subString);
     while (string[iter] != '\0') {
-        if (!isSubStringMatch && string[iter] == subString[0]) {
-            isSubStringMatch = true;
-        }
-        if (isSubStringMatch) {
-            if (string[iter] == subString[subStringMatchIndex]) {
-                subStringMatchIndex++;
-                if (subString[subStringMatchIndex] == '\0') {
-                    subStringCount++;
-                    subStringMatchIndex = 0; 
-                    isSubStringMatch = false;
-                }
-            }
-            else {
-                subStringMatchIndex = 0;
-                isSubStringMatch = false;
+        while (string[iter] == subString[subStringIndex])
+        {
+            subStringIndex++;
+            iter++;
+            if (subString[subStringIndex] == '\0') {
+                subStringCount++;
+                subStringIndex = 0;
             }
         }
         iter++;
@@ -92,6 +83,6 @@ unsigned int countSubString(const char* string, const char* subString) {
 
 int main()
 {
-    countSubString("  test  test  test  test  ", " ");
+    std::cout << countSubString("  testtest testtest testtest  test  test  test  ", "test");
     return 0;
 }
