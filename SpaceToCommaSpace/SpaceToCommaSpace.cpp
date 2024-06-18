@@ -65,7 +65,7 @@ char* replaceCharToCharArray(const char* string, char replace, const char* repla
 
 unsigned int countSubString(const char* string, const char* subString) {
     unsigned int subStringCount = 0;
-    std::size_t iter = 0, subStringIndex = 0, subStringLength = charStrLength(subString);
+    std::size_t iter = 0, subStringIndex = 0;
     while (string[iter] != '\0') {
         while (string[iter] == subString[subStringIndex])
         {
