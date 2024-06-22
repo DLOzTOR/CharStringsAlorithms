@@ -83,12 +83,12 @@ unsigned int countSubString(const char* string, const char* subString) {
 
 char* replace(const char* string, const char* replace, const char* replaceTo) {
     unsigned int stringLength = charStrLength(string);
-    unsigned int replaceLength = charStrLength(replace); 
-    unsigned int replaceToLength = charStrLength(replaceTo); 
+    unsigned int replaceLength = charStrLength(replace);
+    unsigned int replaceToLength = charStrLength(replaceTo);
     unsigned int replaceCount = countSubString(string, replace);
-    size_t iterIn = 0; 
-    size_t iterOut = 0; 
-    size_t replaceIndex = 0; 
+    size_t iterIn = 0;
+    size_t iterOut = 0;
+    size_t replaceIndex = 0;
     size_t replaceIter = 0;
     char* replacedString = new char[(int)charStrLength(string) + (int)(replaceToLength - replaceLength) * (int)replaceCount + 1];
     bool isReplace = false;
