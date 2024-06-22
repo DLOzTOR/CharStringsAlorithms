@@ -81,8 +81,6 @@ unsigned int countSubString(const char* string, const char* subString) {
     return subStringCount;
 }
 
-
-
 char* replace(const char* string, const char* replace, const char* replaceTo) {
     unsigned int stringLength = charStrLength(string);
     unsigned int replaceLength = charStrLength(replace); 

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SpaceToCommaSpace.cpp">
+    <ClCompile Include="CharStringsAlorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
